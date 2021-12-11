@@ -79,7 +79,7 @@ class RecentOrders extends StatelessWidget {
       // mainAxisAlignment: MainAxisAlignment.end, // mainAxisAlignmentdành cho row
       crossAxisAlignment: CrossAxisAlignment.start,
       // crossAxisAlignment dành cho column // horizontal chiều ngang, vertical chiều dọc
-      children: const [
+      children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
@@ -90,17 +90,18 @@ class RecentOrders extends StatelessWidget {
                 letterSpacing: 1.2),
           ),
         ),
-        // Container(
-        //   child: ListView.builder(
-        //       physics: BouncingScrollPhysics(),
-        //       padding: EdgeInsets.only(left: 10),
-        //       scrollDirection: Axis.horizontal,
-        //       itemCount: currentUser.orders.length,
-        //       itemBuilder: (BuildContext context, int index) {
-        //         Order order = currentUser.orders[index];
-        //         return _buildRecentOrders(context, order);
-        //       }),
-        // )
+        Container(
+          height: 120,
+          child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              padding: EdgeInsets.only(left: 10),
+              scrollDirection: Axis.horizontal,
+              itemCount: currentUser.orders.length,
+              itemBuilder: (BuildContext context, int index) {
+                Order order = currentUser.orders[index];
+                return _buildRecentOrders(context, order);
+              }),
+        )
       ],
     );
   }

@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     )),
               ),
             ),
-            // RecentOrders(),
+            RecentOrders(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            // _buidRestaurants()
+            _buidRestaurants()
           ],
         ));
   }
